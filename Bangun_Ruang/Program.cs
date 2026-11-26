@@ -47,9 +47,8 @@
                         }
 
                         break;
+                    case 2:
 
-                    default:
-                        Console.WriteLine("Silahkan pilih angka yang valid");
                         break;
                 }
             }
