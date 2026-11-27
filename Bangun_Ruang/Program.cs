@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Kubus kubus = new Kubus();
+            Balok balok = new Balok();
 
             Console.WriteLine("==== List Bangun Ruang ====");
 
@@ -33,14 +34,14 @@
                     case 1:
                         if (choose == "luas")
                         {
-                            Console.Write("Masukkan ukuran rusuk : ");
+                            Console.Write("Masukkan ukuran rusuk kubus: ");
                             double r = Convert.ToDouble(Console.ReadLine());
                             double luas = kubus.luas_kubus(r);
                             Console.WriteLine($"Luas Kubus : {luas} cm");
                         }
                         else if (choose == "volume")
                         {
-                            Console.Write("Masukkan ukuran rusuk : ");
+                            Console.Write("Masukkan ukuran rusuk kubus : ");
                             double r = Convert.ToDouble(Console.ReadLine());
                             double volume = kubus.volume_kubus(r);
                             Console.WriteLine($"Keliling Kubus : {volume} cm");
@@ -48,7 +49,28 @@
 
                         break;
                     case 2:
-
+                        if (choose == "luas")
+                        {
+                            Console.Write("Masukkan ukuran panjang balok : ");
+                            double p = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran lebar balok : ");
+                            double l = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran tinggi balok : ");
+                            double t = Convert.ToDouble(Console.ReadLine());
+                            double luas = balok.luas_balok(p, l, t);
+                            Console.WriteLine($"Luas Balok : {luas} cm");
+                        }
+                        else if (choose == "volume")
+                        {
+                            Console.Write("Masukkan ukuran panjang balok : ");
+                            double p = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran lebar balok : ");
+                            double l = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran tinggi balok : ");
+                            double t = Convert.ToDouble(Console.ReadLine());
+                            double volume = balok.volume_balok(p, l, t);
+                            Console.WriteLine($"Volume Balok : {volume} cm");
+                        }
                         break;
                 }
             }
