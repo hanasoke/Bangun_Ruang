@@ -6,6 +6,7 @@
         {
             Kubus kubus = new Kubus();
             Balok balok = new Balok();
+            Prisma prisma = new Prisma();
 
             Console.WriteLine("==== List Bangun Ruang ====");
 
@@ -71,6 +72,29 @@
                             double volume = balok.volume_balok(p, l, t);
                             Console.WriteLine($"Volume Balok : {volume} cm");
                         }
+                        break;
+                    case 3:
+                        if (choose == "luas")
+                        {
+                            Console.Write("Masukkan ukuran Luas alas prisma : ");
+                            double la = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran Keliling atas prisma : ");
+                            double ka = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran tinggi prisma : ");
+                            double t = Convert.ToDouble(Console.ReadLine());
+                            double luas = prisma.luas_prisma(la, ka, t);
+                            Console.WriteLine($"Luas Prisma : {luas} cm");
+                        } 
+                        else if (choose == "volume")
+                        {
+                            Console.Write("Masukkan Ukuran Luas alas prisma : ");
+                            double la = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran Tinggi prisma : ");
+                            double t = Convert.ToDouble(Console.ReadLine());
+                            double volume = prisma.volume_prisma(la, t);
+                            Console.WriteLine($"Volume Prisma : {volume} cm");
+                        }
+
                         break;
                 }
             }
