@@ -7,21 +7,25 @@
             Kubus kubus = new Kubus();
             Balok balok = new Balok();
             Prisma prisma = new Prisma();
+            Limas_Segitiga limas_segitiga = new Limas_Segitiga();
 
             Console.WriteLine("==== List Bangun Ruang ====");
 
             Console.WriteLine("1. Kubus");
             Console.WriteLine("2. Balok");
             Console.WriteLine("3. Prisma");
-            Console.WriteLine("4. Limas");
-            Console.WriteLine("5. Tabung");
-            Console.WriteLine("6. Kerucut");
-            Console.WriteLine("7. Bola");
+            Console.WriteLine("4. Limas Segitiga");
+            Console.WriteLine("5. Limas Segiempat");
+            Console.WriteLine("6. Limas Segilima");
+            Console.WriteLine("7. Limas Segienam");
+            Console.WriteLine("8. Tabung");
+            Console.WriteLine("9. Kerucut");
+            Console.WriteLine("10. Bola");
 
             Console.Write("Pilih Bangun Ruang : ");
             double bangun_ruang = Convert.ToDouble(Console.ReadLine());
 
-            if (bangun_ruang >= 8 )
+            if (bangun_ruang >= 11 )
             {
                 Console.WriteLine("Silahkan pilih bangun ruang yang ada dilist");
             }
@@ -95,6 +99,21 @@
                             Console.WriteLine($"Volume Prisma : {volume} cm");
                         }
 
+                        break;
+                    case 4:
+                        if (choose == "luas")
+                        {
+                            Console.Write("Masukkan ukuran alas segitiga : ");
+                            double a = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran tinggi segitiga : ");
+                            double t = Convert.ToDouble(Console.ReadLine());
+                            double luas = limas_segitiga.luas(a, t);
+                            Console.WriteLine($"Luas Limas Segitiga : {luas} cm");
+                        }
+                        else if(choose == "volume")
+                        {
+
+                        }
                         break;
                 }
             }
