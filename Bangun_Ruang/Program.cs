@@ -112,7 +112,14 @@
                         }
                         else if(choose == "volume")
                         {
-
+                            Console.Write("Masukkan ukuran alas segitiga : ");
+                            double a = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran tinggi segitiga : ");
+                            double t = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Masukkan ukuran tinggi limas : ");
+                            double tl = Convert.ToDouble(Console.ReadLine());
+                            double volume = limas_segitiga.volume(a, t, tl);
+                            Console.WriteLine($"Volume Limas Segitiga : {volume} cm");
                         }
                         break;
                 }
